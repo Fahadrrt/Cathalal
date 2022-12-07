@@ -1,0 +1,549 @@
+--coding by YMike/Manidel--
+print("WARNING DAMINELV4 LOADING")
+if game.CoreGui:FindFirstChild("NormalGui") then
+print("WARNING! DAMINELV4 ALREADY LOADING")
+	local ERRORFRAME = Instance.new("Frame")
+	local TextButton = Instance.new("TextButton")
+	local TextLabel = Instance.new("TextLabel")
+
+
+	ERRORFRAME.Name = "ERRORFRAME"
+	ERRORFRAME.Parent = game.CoreGui.NormalGui
+	ERRORFRAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ERRORFRAME.Position = UDim2.new(0.146541625, 0, 0.160642564, 0)
+	ERRORFRAME.Size = UDim2.new(0, 434, 0, 307)
+
+	TextButton.Parent = ERRORFRAME
+	TextButton.BackgroundColor3 = Color3.fromRGB(255, 17, 0)
+	TextButton.Position = UDim2.new(0.887096763, 0, 0, 0)
+	TextButton.Size = UDim2.new(0, 49, 0, 50)
+	TextButton.Font = Enum.Font.SourceSans
+	TextButton.Text = "X"
+	TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextButton.TextScaled = true
+	TextButton.TextSize = 14.000
+	TextButton.TextWrapped = true
+
+
+
+	TextLabel.Parent = ERRORFRAME
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.Position = UDim2.new(0.205069125, 0, 0.276872963, 0)
+	TextLabel.Size = UDim2.new(0, 255, 0, 111)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "ERROR!  [DAMINELV4 ALREADY LOADED]"
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+
+	local function UOBQKY_fake_script() -- TextButton.LocalScript 
+		local script = Instance.new('LocalScript', TextButton)
+
+		script.Parent.MouseButton1Click:Connect(function()
+			script.Parent.Parent:Destroy()
+		end)
+	end
+	coroutine.wrap(UOBQKY_fake_script)()
+	wait(5)
+	TextLabel.Text = "Destroying in 3."
+	wait(1)
+	TextLabel.Text = "Destroying in 2.."
+	wait(1)
+	TextLabel.Text = "Destroying in 1..."
+	wait(1)
+	if game.CoreGui.NormalGui:FindFirstChild("ERRORFRAME") then
+		ERRORFRAME:Destroy()
+	end
+
+else
+
+local normal_gui = Instance.new("ScreenGui")
+normal_gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+normal_gui.Name = "NormalGui"
+normal_gui.Parent = workspace
+
+local blur_frame = Instance.new("Frame")
+blur_frame.BackgroundColor3 = Color3.new(0.317647, 0.317647, 0.317647)
+blur_frame.BackgroundTransparency = 0.44999998807907104
+blur_frame.Position = UDim2.new(-0.0147517314, 0, 0, 0)
+blur_frame.Size = UDim2.new(0, 907, 0, 498)
+blur_frame.Name = "BlurFrame"
+blur_frame.Parent = normal_gui
+
+local part1 = Instance.new("Frame")
+part1.BackgroundColor3 = Color3.new(0.184314, 0.184314, 0.184314)
+part1.Position = UDim2.new(0.0253583249, 0, 0.0301204827, 0)
+part1.Size = UDim2.new(0, 139, 0, 468)
+part1.Name = "Part1"
+part1.Parent = blur_frame
+
+local daminel2 = Instance.new("TextLabel")
+daminel2.Font = Enum.Font.SourceSans
+daminel2.Text = "DAMINELV4"
+daminel2.TextColor3 = Color3.new(0.301961, 0.564706, 0.192157)
+daminel2.TextSize = 30
+daminel2.TextWrapped = true
+daminel2.BackgroundColor3 = Color3.new(1, 1, 1)
+daminel2.BackgroundTransparency = 1
+daminel2.Position = UDim2.new(0.0393105745, 0, 0.0130264629, 0)
+daminel2.Size = UDim2.new(0, 127, 0, 52)
+daminel2.Name = "Daminel2"
+daminel2.Parent = part1
+
+local local_script = Instance.new("LocalScript")
+local_script.Parent = daminel2
+
+local putname = Instance.new("TextBox")
+putname.Font = Enum.Font.SourceSans
+putname.Text = "DAMINELV4"
+putname.TextColor3 = Color3.new(0.490196, 1, 0.376471)
+putname.TextScaled = true
+putname.TextSize = 14
+putname.TextWrapped = true
+putname.BackgroundColor3 = Color3.new(0, 0, 0)
+putname.Position = UDim2.new(0, 0, 0.213675201, 0)
+putname.Size = UDim2.new(0, 139, 0, 50)
+putname.Name = "putname"
+putname.Parent = part1
+
+local custom_name = Instance.new("TextLabel")
+custom_name.Font = Enum.Font.SourceSans
+custom_name.Text = "Put custom name up this text"
+custom_name.TextColor3 = Color3.new(0, 0, 0)
+custom_name.TextScaled = true
+custom_name.TextSize = 14
+custom_name.TextWrapped = true
+custom_name.BackgroundColor3 = Color3.new(1, 1, 1)
+custom_name.BackgroundTransparency = 1
+custom_name.Position = UDim2.new(0, 0, 0.320512831, 0)
+custom_name.Size = UDim2.new(0, 139, 0, 31)
+custom_name.Name = "CustomName"
+custom_name.Parent = part1
+
+local anti_blur = Instance.new("TextButton")
+anti_blur.Font = Enum.Font.SourceSans
+anti_blur.Text = "BLUR BACKGROUND (Toggled)"
+anti_blur.TextColor3 = Color3.new(0.227451, 0.545098, 0.47451)
+anti_blur.TextScaled = true
+anti_blur.TextSize = 14
+anti_blur.TextWrapped = true
+anti_blur.BackgroundColor3 = Color3.new(0.439216, 1, 0.0941177)
+anti_blur.Position = UDim2.new(0, 0, 0.427350432, 0)
+anti_blur.Size = UDim2.new(0, 139, 0, 50)
+anti_blur.Name = "AntiBlur"
+anti_blur.Parent = part1
+
+local toggle = Instance.new("LocalScript")
+toggle.Name = "toggle"
+toggle.Parent = anti_blur
+
+local toggled_value = Instance.new("BoolValue")
+toggled_value.Name = "ToggledValue"
+toggled_value.Parent = anti_blur
+toggled_value.Value = true
+
+local untoggle = Instance.new("LocalScript")
+untoggle.Name = "Untoggle"
+untoggle.Parent = anti_blur
+
+local part2 = Instance.new("Frame")
+part2.BackgroundColor3 = Color3.new(0.184314, 0.184314, 0.184314)
+part2.Position = UDim2.new(0.212789416, 0, 0.0301204827, 0)
+part2.Size = UDim2.new(0, 148, 0, 468)
+part2.Name = "Part2"
+part2.Parent = blur_frame
+
+local disabler = Instance.new("TextButton")
+disabler.Font = Enum.Font.SourceSans
+disabler.Text = "AntiCheat Disabler (Recreation)"
+disabler.TextColor3 = Color3.new(1, 0.231373, 0.207843)
+disabler.TextScaled = true
+disabler.TextSize = 14
+disabler.TextWrapped = true
+disabler.BackgroundColor3 = Color3.new(0, 0, 0)
+disabler.Size = UDim2.new(0, 148, 0, 50)
+disabler.Name = "Disabler"
+disabler.Parent = part2
+
+local text_label = Instance.new("TextLabel")
+text_label.Font = Enum.Font.SourceSans
+text_label.Text = "C"
+text_label.TextColor3 = Color3.new(0.152941, 0.419608, 0.419608)
+text_label.TextScaled = true
+text_label.TextSize = 14
+text_label.TextWrapped = true
+text_label.BackgroundColor3 = Color3.new(0.352941, 0.352941, 0.352941)
+text_label.BackgroundTransparency = 1
+text_label.Position = UDim2.new(0.743243277, 0, 0.340000004, 0)
+text_label.Size = UDim2.new(0, 44, 0, 30)
+text_label.Parent = disabler
+
+local daminel = Instance.new("TextLabel")
+daminel.Font = Enum.Font.SourceSans
+daminel.Text = "DAMINELV4"
+daminel.TextColor3 = Color3.new(0.301961, 0.564706, 0.192157)
+daminel.TextSize = 30
+daminel.TextWrapped = true
+daminel.BackgroundColor3 = Color3.new(1, 1, 1)
+daminel.BackgroundTransparency = 1
+daminel.Position = UDim2.new(0.852260232, 0, 0.0301204808, 0)
+daminel.Size = UDim2.new(0, 127, 0, 52)
+daminel.ZIndex = 5
+daminel.Name = "Daminel"
+daminel.Parent = normal_gui
+
+local local_script_2 = Instance.new("LocalScript")
+local_script_2.Parent = daminel
+
+local text_label_2 = Instance.new("TextLabel")
+text_label_2.Font = Enum.Font.SourceSans
+text_label_2.Text = "PRIVATE"
+text_label_2.TextColor3 = Color3.new(1, 0, 0)
+text_label_2.TextScaled = true
+text_label_2.TextSize = 14
+text_label_2.TextWrapped = true
+text_label_2.BackgroundColor3 = Color3.new(0.964706, 1, 0.545098)
+text_label_2.Position = UDim2.new(0.0393700786, 0, 0.730769217, 0)
+text_label_2.Size = UDim2.new(0, 122, 0, 39)
+text_label_2.Parent = daminel
+
+local private_check = Instance.new("LocalScript")
+private_check.Name = "PrivateCheck"
+private_check.Parent = daminel
+
+local warningframe = Instance.new("Frame")
+warningframe.BackgroundColor3 = Color3.new(0, 0, 0)
+warningframe.Position = UDim2.new(0.650342226, 0, 0.670682728, 0)
+warningframe.Size = UDim2.new(0, 298, 0, 111)
+warningframe.Name = "WARNINGFRAME"
+warningframe.Parent = normal_gui
+
+local warning = Instance.new("TextLabel")
+warning.Font = Enum.Font.SourceSans
+warning.Text = "DaminelV4 susesfully Loaded! Press M to close/open"
+warning.TextColor3 = Color3.new(0.352941, 0.54902, 0.341176)
+warning.TextScaled = true
+warning.TextSize = 14
+warning.TextWrapped = true
+warning.BackgroundColor3 = Color3.new(1, 1, 1)
+warning.BackgroundTransparency = 1
+warning.Position = UDim2.new(0.22147651, 0, 0, 0)
+warning.Size = UDim2.new(0, 232, 0, 111)
+warning.Name = "Warning"
+warning.Parent = warningframe
+
+local local_script_3 = Instance.new("LocalScript")
+local_script_3.Parent = warning
+
+local image_label = Instance.new("ImageLabel")
+image_label.Image = "http://www.roblox.com/asset/?id=6525485104"
+image_label.BackgroundColor3 = Color3.new(1, 1, 1)
+image_label.BackgroundTransparency = 1
+image_label.Position = UDim2.new(0.0335570425, 0, 0.225225225, 0)
+image_label.Size = UDim2.new(0, 56, 0, 61)
+image_label.Parent = warningframe
+
+local toggle_key = Instance.new("LocalScript")
+toggle_key.Name = "ToggleKey"
+toggle_key.Parent = normal_gui
+
+local disabler_key_c = Instance.new("LocalScript")
+disabler_key_c.Name = "DisablerKeyC"
+disabler_key_c.Parent = normal_gui
+
+local disabler_main = Instance.new("LocalScript")
+disabler_main.Name = "DisablerMain"
+disabler_main.Parent = normal_gui
+
+local value = Instance.new("BoolValue")
+value.Parent = normal_gui
+
+--//Modules
+
+local modules = {}
+
+--// Scripts
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	while true do
+		wait(0.5)
+		script.Parent.Text = script.Parent.Parent.putname.Text
+	end
+end)
+
+-- toggle
+task.spawn(function()
+	local script = toggle
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local warning = script.Parent.Parent.Parent.Parent.WARNINGFRAME 
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.ToggledValue.Value == false then
+		script.Parent.Parent.Parent.BackgroundTransparency = 1
+			script.Parent.Text = "BLUR BACKGROUND (Untoggled)"
+			if warning.Visible == false then	
+			wait(0.1)
+				warning.Visible = true
+				warning.Warning.Text = "SUSESFULLY UNTOGGLED ANTI BLUR"
+				warning.Warning.LocalScript.Disabled = false
+				wait(1)
+				script.Parent.ToggledValue.Value = true
+			elseif warning.Visible == true then
+				wait(5)
+				warning.Visible = true
+				warning.Warning.Text = "SUSESFULLY UNTOGGLED ANTI BLUR"
+				warning.Warning.LocalScript.Disabled = false
+				wait(1)
+				script.Parent.ToggledValue.Value = true
+			end
+		
+	
+			
+		end
+			
+			end)
+	
+	
+	
+	
+	
+		
+	
+			
+	
+end)
+
+-- Untoggle
+task.spawn(function()
+	local script = untoggle
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local warning = script.Parent.Parent.Parent.Parent.WARNINGFRAME 
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.ToggledValue.Value == true then
+			script.Parent.Parent.Parent.BackgroundTransparency = 0.45
+			script.Parent.Text = "BLUR BACKGROUND (Toggled)"
+			if warning.Visible == false then	
+				wait(0.1)
+				warning.Visible = true
+				warning.Warning.Text = "SUSESFULLY TOGGLED ANTI BLUR"
+				warning.Warning.LocalScript.Disabled = false
+				script.Parent.ToggledValue.Value = false
+			else
+				if warning.Visible == true then
+					wait(5)
+					warning.Visible = true
+					warning.Warning.Text = "SUSESFULLY TOGGLED ANTI BLUR"
+					warning.Warning.LocalScript.Disabled = false
+					script.Parent.ToggledValue.Value = false
+				end
+				
+				
+			end
+	
+		end
+	
+	end)
+	
+	
+	
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_2
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	while true do
+		wait(0.5)
+		script.Parent.Text = script.Parent.Parent.BlurFrame.Part1.putname.Text
+	end
+end)
+
+-- PrivateCheck
+task.spawn(function()
+	local script = private_check
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	if script.Parent.Parent.Value.Value == true then
+		script.Parent.TextLabel.Visible = true
+	end
+end)
+
+-- LocalScript
+task.spawn(function()
+	local script = local_script_3
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	while true do
+		wait(5)
+		script.Parent.Parent.Visible = false
+		script.Disabled = true
+	end
+end)
+
+-- ToggleKey
+task.spawn(function()
+	local script = toggle_key
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	-- Put this inside what ever it is you want to be visible on key press, scripted by Absolute Fruit @absolute_fruit
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(m) -- Replace e with your key
+		if m == "m" then --Replace e with your key 
+			script.Parent.BlurFrame.Visible = true
+		else
+			script.Parent.BlurFrame.Visible = false
+		end
+	end)
+end)
+
+-- DisablerKeyC
+task.spawn(function()
+	local script = disabler_key_c
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local Plr = game.Players.LocalPlayer
+	local lplr = game.Players.LocalPlayer
+	local entity = lplr
+	local warning = script.Parent.WARNINGFRAME.Warning
+	local warning2 = warning.Parent
+		
+	Plr:GetMouse().KeyDown:Connect(function(c)
+		if c == "c" then
+			if (lplr.Character:FindFirstChildWhichIsA("ForceField")) then
+				entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, true)
+				entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+				repeat task.wait() until entity.character.Humanoid.MoveDirection ~= Vector3.zero
+				task.wait(0.2)
+				entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+				entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+				if warning2.Visible == false then
+				wait(0.1)
+				warning2.Visible = true
+				warning.LocalScript.Disabled = false
+					warning.Text = "Disabled Anticheat!"
+				else
+					wait(5)
+					warning2.Visible = true
+					warning.LocalScript.Disabled = false
+					warning.Text = "Disabled Anticheat!"
+				end
+			else
+				if warning2.Visible == false then
+				warning.Text = "Failed to disable, Enable it when u have a force field / respawn"
+				warning2.Visible = true
+					warning.LocalScript.Disabled = false
+				else
+					wait(5)
+					warning.Text = "Failed to disable, Enable it when u have a force field / respawn"
+					warning2.Visible = true
+					warning.LocalScript.Disabled = false
+				end
+		end
+		end
+		end)
+end)
+
+-- DisablerMain
+task.spawn(function()
+	local script = disabler_main
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+			end
+		return oldreq(target)
+	end
+end
+	local no = game.CoreGui
+	local lplr = game.Players.LocalPlayer
+	local entity = lplr
+	local warning = script.Parent.WARNINGFRAME.Warning
+	local warning2 = warning.Parent
+	
+	script.Parent.BlurFrame.Part2.Disabler.MouseButton1Click:Connect(function()
+	if (lplr.Character:FindFirstChildWhichIsA("ForceField")) then
+			entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, true)
+			entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+			repeat task.wait() until entity.character.Humanoid.MoveDirection ~= Vector3.zero
+			task.wait(0.2)
+			entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+			entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+			wait(0.1)
+			warning2.Visible = true
+			warning.LocalScript.Disabled = false
+			warning.Text = "Disabled Anticheat!"
+		else
+			warning2.Visible = true
+			warning.LocalScript.Disabled = false
+			warning.Text = "Failed to disable, Enable it when u have a force field / respawn"
+		end
+		end)
+		end)
